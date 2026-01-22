@@ -1,0 +1,57 @@
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">Badging App</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#aboutNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="aboutNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/partners" routerLinkActive="active">Our Partners</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/about" routerLinkActive="active">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn join-btn ms-3" routerLink="/join-us" routerLinkActive="active">Join Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero-section text-center position-relative">
+  <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1470&q=80"
+       class="img-fluid w-100" alt="About Banner">
+
+  <div class="hero-overlay position-absolute top-50 start-50 translate-middle text-center">
+    <h1 class="hero-title">About Us</h1>
+    <p class="hero-subtitle">Connecting learners, researchers, and innovators worldwide</p>
+  </div>
+</section>
+
+<!-- ABOUT CONTENT -->
+<div class="container mt-5 text-center about-section">
+  <p class="lead">
+    Badging App is dedicated to fostering professional growth and innovation by connecting learners, researchers, and industry leaders.
+    Our platform provides access to online research conferences, workshops, and collaborative opportunities designed to empower your career in 2026 and beyond.
+  </p>
+  <button class="btn btn-primary mb-4" (click)="toggleInfo()">Learn More</button>
+  <div *ngIf="showInfo" class="alert about-alert">
+    <p>
+      Since our founding, we have partnered with global organizations to provide high-quality learning experiences.
+      Our mission is to make knowledge sharing accessible, interactive, and inspiring.
+      Join our community to explore new ideas, earn recognitions, and grow your professional network.
+    </p>
+  </div>
+</div>

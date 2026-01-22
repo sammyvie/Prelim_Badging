@@ -1,0 +1,116 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #F7EFE7; /* Antique Beige */
+  color: #1B3A4B; /* Worn Navy for default text */
+}
+
+.main-container {
+  padding-top: 10px;
+}
+
+/* NAVBAR */
+.main-navbar {
+  background-color: #1B3A4B; /* Worn Navy */
+  padding: 14px 0;
+}
+
+.nav-link {
+  color: #F7EFE7 !important; /* Antique Beige */
+  font-weight: 500;
+  margin-left: 18px;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+.join-btn {
+  background-color: #2E5A74; /* Vintage Denim */
+  color: #F7EFE7 !important; /* Antique Beige */
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-weight: 600;
+}
+
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.hero-section img {
+  height: 450px;
+  object-fit: cover;
+  filter: brightness(0.6); /* slightly darker so text pops */
+}
+
+.hero-overlay {
+  background-color: rgba(114, 155, 163, 0.85); /* Dusty Blue semi-transparent */
+  color: #F7EFE7; /* Antique Beige text */
+  text-align: center;
+  z-index: 2;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 700px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.hero-badge {
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  background-color: #D1B18B; /* Faded Khaki */
+  color: #1B3A4B; /* Worn Navy */
+  font-weight: 700;
+  border-radius: 50px;
+}
+
+/* CONFERENCE CARDS */
+.conference-card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  background-color: #F7EFE7; /* Antique Beige background for cards */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.conference-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.conference-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.conference-card h5,
+.conference-card p {
+  margin: 0;
+  padding: 12px 16px;
+}
+
+.conference-city {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2E5A74; /* Vintage Denim */
+}
+
+.conference-field {
+  font-size: 0.9rem;
+  color: #729BA3; /* Dusty Blue */
+}

@@ -1,0 +1,64 @@
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">Badging App</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/partners" routerLinkActive="active">Our Partners</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn join-btn ms-3" routerLink="/join-us" routerLinkActive="active">Join Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+
+  <!-- HERO SECTION -->
+  <section class="hero-section position-relative text-center">
+    <img src="https://admin.live.ilo.org/sites/default/files/styles/wide/public/2023-06/52951700532_df0e3916d9_k.jpg?itok=1HKT2Tjp" class="img-fluid w-100" alt="Research Conferences Banner">
+
+    <!-- Overlay with semi-transparent background -->
+   <div class="hero-overlay position-absolute top-50 start-50 translate-middle text-center p-4 rounded">
+  <h1 class="hero-title">Dive Into Innovation </h1>
+  <p class="hero-subtitle">Explore cutting-edge research at our 2026 online conferences—connect, learn, and grow!</p>
+  <span class="badge hero-badge">Registration are Open!</span>
+</div>
+
+  </section>
+
+  <!-- CONFERENCE SECTION -->
+  <section class="conference-section">
+    <h2 class="section-title text-center">
+      Join our Research Conferences around the Globe!
+    </h2>
+
+    <div class="row text-center mt-4">
+      <div class="col-md-3 mb-4" *ngFor="let conf of conferences">
+        <div class="conference-card">
+          <img [src]="conf.image" [alt]="conf.city" class="conference-img" />
+          <h5 class="conference-city">{{ conf.city }}</h5>
+          <p class="conference-field">{{ conf.field }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

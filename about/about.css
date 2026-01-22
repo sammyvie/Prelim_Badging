@@ -1,0 +1,4 @@
+.main-navbar { background-color: #3f3f3f; padding: 14px 0; }
+.nav-link { color: #fff !important; font-weight: 500; margin-left: 18px; }
+.nav-link.active { text-decoration: underline; }
+.join-btn { background-color: #f4c400; color: #000 !important; border-radius: 20px; padding: 6px 18px; font-weight: 600; }

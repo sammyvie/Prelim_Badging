@@ -1,0 +1,105 @@
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">Badging App</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#partnersNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="partnersNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLink="/"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{ exact: true }">
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active"
+             routerLink="/partners"
+             routerLinkActive="active">
+            Our Partners
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLink="/about"
+             routerLinkActive="active">
+            About
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link btn join-btn ms-3"
+             routerLink="/join-us"
+             routerLinkActive="active">
+            Join Us
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero-section text-center position-relative">
+  <img
+    src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1470&q=80"
+    class="img-fluid w-100"
+    alt="Partners Banner"
+  >
+
+  <div class="hero-overlay position-absolute top-50 start-50 translate-middle text-center">
+    <h1 class="hero-title">Our Partners</h1>
+    <p class="hero-subtitle">
+      Collaborating with organizations worldwide to drive innovation
+    </p>
+  </div>
+</section>
+
+<!-- PARTNERS TABLE -->
+<div class="container mt-5 pt-5">
+  <table class="table table-bordered table-hover text-center align-middle">
+    <thead class="table-light">
+      <tr>
+        <th>Company</th>
+        <th>Sponsorship</th>
+        <th>Website</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let partner of partners">
+        <td class="d-flex align-items-center justify-content-center">
+          <img
+            [src]="partner.logo"
+            [alt]="partner.name + ' Logo'"
+            class="partner-logo me-2"
+          >
+          <span>{{ partner.name }}</span>
+        </td>
+
+        <td>{{ partner.level }}</td>
+
+        <td>
+          <a
+            [href]="partner.link"
+            target="_blank"
+            class="btn btn-sm btn-outline-primary"
+          >
+            View Website
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

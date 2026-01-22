@@ -1,0 +1,63 @@
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top main-navbar">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">Badging App</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#joinUsNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="joinUsNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/partners" routerLinkActive="active">Our Partners</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn join-btn ms-3" routerLink="/join-us" routerLinkActive="active">Join Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="container mt-5 pt-5">
+  <h2 class="text-center mb-4">Join Our Mailing List</h2>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <input
+        class="form-control mb-2"
+        placeholder="First Name"
+        [(ngModel)]="user.firstName"
+      />
+      <input
+        class="form-control mb-2"
+        placeholder="Last Name"
+        [(ngModel)]="user.lastName"
+      />
+      <input
+        type="email"
+        class="form-control mb-2"
+        placeholder="Email"
+        [(ngModel)]="user.email"
+      />
+      <input
+        class="form-control mb-3"
+        placeholder="Institution"
+        [(ngModel)]="user.institution"
+      />
+      <button class="btn btn-success w-100" (click)="submitForm()">Submit</button>
+    </div>
+  </div>
+</div>
